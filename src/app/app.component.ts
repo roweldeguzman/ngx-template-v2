@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: '<router-outlet></router-outlet>',
 })
-export class AppComponent {
-  title = 'ngx-template';
+export class AppComponent implements OnInit {
+  
+  
+  ngOnInit() {
+    setTimeout(()=> document.querySelector('.preloader-base').remove(), 300)
+    
+  }
 }
