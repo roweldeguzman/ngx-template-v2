@@ -1,0 +1,30 @@
+<div class="block-header">
+	<h2>
+    {{ title }}
+    <small *ngIf="subTitle"> {{ subTitle }} </small>
+  </h2>
+
+	<ul class="actions" *ngIf="action">
+
+    <li><a><i class="zmdi zmdi-trending-up"></i></a></li>
+    <li><a><i class="zmdi zmdi-check-all"></i></a></li>
+    <li class="dropdown" dropdown>
+
+      <a dropdownToggle>
+        <i class="zmdi zmdi-more-vert"></i>
+      </a> 
+
+      <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="button-basic">
+        <li class="dropdown-arrow"></li>
+        <li role="menuitem"><a class="dropdown-item">Action</a></li>
+        <li role="menuitem"><a class="dropdown-item">Another action</a></li>
+        <li role="menuitem"><a class="dropdown-item">Something else here</a></li>
+        <li class="divider dropdown-divider"></li>
+        <li role="menuitem"><a class="dropdown-item">Separated link</a></li>				
+      </ul>
+      
+    </li>
+    
+  </ul>
+  
+</div>

@@ -1,0 +1,75 @@
+.mini-charts-item {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  position: relative;
+  margin-bottom: 30px
+}
+.mini-charts-item .chart {
+  padding: 15px;
+  float: left
+}
+.mini-charts-item .chart.chart-pie {
+  margin: 0 20px
+}
+.mini-charts-item .count {
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 16px 12px
+}
+.mini-charts-item .count > h2 {
+  margin: 0;
+  line-height: 100%;
+  font-size: 22px;
+  font-weight: 300;
+  color: #fff
+}
+.mini-charts-item .count > small {
+  margin-bottom: 2px;
+  display: block
+}
+.mini-charts-item .count > h2,
+.mini-charts-item .count > small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+.mini-charts-item > .clearfix,
+.mini-charts-item > .dl-horizontal dd,
+.mini-charts-item > .container,
+.mini-charts-item > .container-fluid,
+.mini-charts-item > .row,
+.mini-charts-item > .form-horizontal .form-group,
+.mini-charts-item > .btn-toolbar,
+.mini-charts-item > .btn-group-vertical > .btn-group,
+.mini-charts-item > .nav,
+.mini-charts-item > .navbar,
+.mini-charts-item > .navbar-header,
+.mini-charts-item > .navbar-collapse,
+.mini-charts-item > .pager,
+.mini-charts-item > .panel-body,
+.mini-charts-item > .modal-footer {
+  position: relative;
+  z-index: 1
+}
+.mini-charts-item:before {
+  -webkit-transition: width;
+  -o-transition: width;
+  transition: width;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  content: "";
+  width: 130px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 0;
+  top: 0
+}
+.mini-charts-item:hover .count {
+  color: #fff!important
+}
+.mini-charts-item:hover:before {
+  width: 100%
+}

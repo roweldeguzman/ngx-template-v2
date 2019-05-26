@@ -1,3 +1,33 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
-
+@import "~material-design-iconic-font/dist/css/material-design-iconic-font.min.css";
+@import "~perfect-scrollbar/css/perfect-scrollbar.css";
+@import "~roboto-fontface/css/roboto/roboto-fontface.css";
 /* You can add global styles to this file, and also import other style files */
+
+html, body { padding: 0; margin: 0; }
+html {
+  position: relative;
+  min-height: 100%;    
+}
+body{
+  font-family: roboto;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+}
+main {
+  margin-top: 65px;
+}
+
+@import './assets/scss/partials/layout.vars';
+@import './assets/scss/screen';
+@import './assets/scss/loader';
+
+@import './assets/scss/header';
+@import './assets/scss/hamburger';
+@import './assets/scss/sidebar';
+@import './assets/scss/dropdown';
+@import './assets/scss/colors';
+@import './assets/scss/charts';
+
+@import './assets/scss/partials/responsive.partial';

@@ -1,0 +1,1 @@
+export * from './screen-action/screen-action.component';

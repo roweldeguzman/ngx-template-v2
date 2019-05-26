@@ -1,23 +1,28 @@
-/* Angular */
+
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-/* Component */
+import { RouterModule } from '@angular/router';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+
+import { ScreenActionComponent } from '@app/shared/components'
+import { SharedModule } from '@app/shared';
+
 import { HomeComponent } from './home.component';
-/* Router */
-import { Routes, RouterModule } from '@angular/router';
-const routes: Routes = [
-  { path: '', component: HomeComponent }
-];
+import { MiniChartsComponent } from './mini-charts/mini-charts.component';
 
 @NgModule({
 	imports: [
-    RouterModule.forChild(routes),
-    CommonModule,
-    FormsModule
+    FormsModule,
+    SharedModule,
+    NgxChartsModule,
+    RouterModule.forChild([
+      { path: '', component: HomeComponent }
+    ]),
 	],
 	declarations: [
-    HomeComponent
+    HomeComponent,
+    ScreenActionComponent,
+    MiniChartsComponent
   ],
 	schemas: [NO_ERRORS_SCHEMA]
 })

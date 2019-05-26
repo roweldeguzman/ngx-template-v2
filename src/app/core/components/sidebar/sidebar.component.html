@@ -1,0 +1,258 @@
+<aside>
+  <app-logged-user></app-logged-user>
+  <nav [perfectScrollbar] id="for-scroll" [disabled]="scrollbarDisableOnMobile">
+    <ul class="list-unstyled">
+
+      <li>
+        <a routerLinkActive="active" routerLink="/home">
+          <div class="icon-circle">
+            <i class="zmdi zmdi-home"></i>
+          </div>
+          <span>Home</span>
+        </a>
+      </li>
+
+      <li>
+        <a routerLinkActive="active" routerLink="/typography">
+          <div class="icon-circle">						
+            <i class="zmdi zmdi-format-underlined"></i>
+          </div>
+          <span>Typography</span>
+        </a>
+      </li>
+
+
+      <li class="sub-menu" [class.toggled]="contains('widgets')">
+        <a [toggle-submenu] [class.active]="contains('widgets')">
+          <div class="icon-circle">
+            <i class="zmdi zmdi-lamp"></i>
+          </div>
+          <span>Widgets</span>
+        </a>
+        <ul class="list-unstyled" [ngStyle]="{'display': contains('widgets') ? '': 'none'}">
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/widgets/template">Templates</a>
+          </li>
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/widgets/widget">Widgets</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="sub-menu" [class.toggled]="contains('tables')">
+        <a [toggle-submenu] [class.active]="contains('tables')">
+          <div class="icon-circle">
+            <i class="zmdi zmdi zmdi-dialpad"></i>
+          </div>
+          <span>Tables</span>
+        </a>
+        <ul class="list-unstyled" [ngStyle]="{'display': contains('tables') ? '': 'none'}">
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/tables/table">Tables</a>
+          </li>
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/tables/data-table">Data Tables</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="sub-menu" [class.toggled]="contains('forms')">
+        <a [toggle-submenu] [class.active]="contains('forms')">
+          <div class="icon-circle">
+            <i class="zmdi zmdi-badge-check"></i>
+          </div>
+          <span>Forms</span>
+        </a>
+        <ul class="list-unstyled" [ngStyle]="{'display': contains('forms') ? '': 'none'}">
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/forms/form-basic">Basic Form Elements</a>
+          </li>
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/forms/form-component">Form Components</a>
+          </li>
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/forms/form-example">Form Example</a>
+          </li>
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/forms/form-validation">Form Validation</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="sub-menu" [class.toggled]="contains('user-interface')">
+        <a [toggle-submenu] [class.active]="contains('user-interface')">
+          <div class="icon-circle">
+            <i class="zmdi zmdi-desktop-mac"></i>
+          </div>
+          <span>UI Element</span>
+        </a>
+        <ul class="list-unstyled" [ngStyle]="{'display': contains('user-interface') ? '': 'none'}">
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/user-interface/ui-bootstrap">UI Bootstrap</a>
+          </li>
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/user-interface/colors">Colors</a>
+          </li>
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/user-interface/animations">Animation</a>
+          </li>
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/user-interface/box-shadow">Box Shadow</a>
+          </li>
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/user-interface/buttons">Buttons</a>
+          </li>
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/user-interface/icons">Icons</a>
+          </li>
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/user-interface/alerts">Alerts</a>
+          </li>
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/user-interface/notification-and-dialogs">Notifications & Dialogs</a>
+          </li>
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/user-interface/media">Media</a>
+          </li>
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/user-interface/modal">Modal</a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a routerLink="/charts" [class.active]="contains('charts')">
+          <div class="icon-circle">
+            <i class="zmdi zmdi-trending-up"></i>
+          </div>
+          <span>Chats</span>
+        </a>
+      </li>
+
+      <li class="sub-menu" [class.toggled]="contains('gallery')">
+        <a [toggle-submenu] [class.active]="contains('gallery')">
+          <div class="icon-circle">
+            <i class="zmdi zmdi-image-alt"></i>
+          </div>
+          <span>Photo Gallery</span>
+        </a>
+        <ul class="list-unstyled" [ngStyle]="{'display': contains('gallery') ? '': 'none'}">
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/gallery/default">Default</a>
+          </li>
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/gallery/timeline">Timeline</a>
+          </li>
+        </ul>
+      </li>
+      <li class="hidden">
+        <a routerLink="/calendar" [class.active]="contains('calendar')">
+          <div class="icon-circle">
+            <i class="zmdi zmdi-calendar"></i>
+          </div>
+          <span>Calendar</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/generic-classes" [class.active]="contains('generic-classes')">
+          <div class="icon-circle">
+            <i class="zmdi zmdi-layers"></i>
+          </div>
+          <span>Utilities</span>
+        </a>
+      </li>
+      <li class="sub-menu" [class.toggled]="contains('sample-page')">
+        <a [toggle-submenu] [class.active]="contains('sample-page')">
+          <div class="icon-circle">
+            <i class="zmdi zmdi-collection-bookmark"></i>
+          </div>
+          <span>Pages</span>
+        </a>
+        <ul class="list-unstyled" [ngStyle]="{'display': contains('sample-page') ? '': 'none'}">
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/sample-page/profile">Profile</a>
+          </li>
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/sample-page/list-view">List View</a>
+          </li>
+          <li class="hidden">
+            <a class="sub" routerLinkActive="active" routerLink="/sample-page/message">Messages</a>
+          </li>
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/sample-page/pricing-table">Pricing Table</a>
+          </li>
+          <li class="hidden">
+            <a class="sub" routerLinkActive="active" routerLink="/sample-page/contact">Contacts</a>
+          </li>
+          <li class="hidden">
+            <a class="sub" routerLinkActive="active" routerLink="/sample-page/invoice">Invoice</a>
+          </li>
+          <li class="hidden">
+            <a class="sub" routerLinkActive="active" routerLink="/sample-page/wall">Wall</a>
+          </li>
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/login">Login</a>
+          </li>
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/signup">Sign Up</a>
+          </li>
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/forgot-password">Forgot Password</a>
+          </li>
+          <li>
+            <a class="sub" >Login 2 and Sign Up 2 </a>
+          </li>
+          <li>
+            <a class="sub" >Lock Screen</a>
+          </li>
+          <li>
+            <a class="sub" routerLinkActive="active" routerLink="/page404">Error 404</a>
+          </li>
+        </ul>
+      </li>
+      <li class="sub-menu multiple">
+        <a [toggle-submenu]>
+          <div class="icon-circle">
+            <i class="zmdi zmdi-menu"></i>
+          </div>
+          <span>Multi level menu</span>
+        </a>
+        <ul class="list-unstyled">
+          <li><a class="sub">Level 2</a></li>
+          <li><a class="sub">Level 2</a></li>
+          <li class="sub-menu multiple">
+            <a [toggle-submenu] class="sub">Level 3</a>
+            <ul class="list-unstyled">
+              <li><a class="sub">Level 3</a></li>
+              <li><a class="sub">Level 3</a></li>
+              <li class="sub-menu multiple">
+                <a [toggle-submenu] class="sub">Level 4</a>
+                <ul class="list-unstyled">
+                  <li><a class="sub">Level 4</a></li>
+                  <li><a class="sub">Level 4</a></li>
+                  <li class="sub-menu multiple">
+                    <a [toggle-submenu] class="sub">Level 5</a>
+                    <ul class="list-unstyled">
+                      <li><a class="sub">Level 6</a></li>
+                      <li><a class="sub">Level 6...</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a routerLink="/reference" [class.active]="contains('reference')">
+          <div class="icon-circle">
+            <i class="zmdi zmdi-info"></i>
+          </div>
+          <span>Credits & Reference</span>
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+</aside>
+<div class="overlay" (click)="toggleSidebar()"></div>

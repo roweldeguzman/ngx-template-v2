@@ -1,0 +1,79 @@
+app-hamburger{
+  button.navbar-toggle{
+    padding: 4px 10px;
+    border: none !important;
+    background-color: transparent;
+  }
+  button.navbar-toggle:hover,
+  button.navbar-toggle:focus{
+    background-color: transparent !important;
+  }
+  .hamburger-box {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+  }
+  .hamburger--spring .hamburger-inner {
+    top: 6px;
+    transition: background-color 0s linear .13s;
+  }
+  .hamburger-inner::after, 
+  .hamburger-inner::before{
+    display: block;
+    content: "";
+  }
+  .hamburger-inner, 
+  .hamburger-inner::after, 
+  .hamburger-inner::before {
+    background-color: #fff;
+  }
+  .hamburger-inner, 
+  .hamburger-inner::after, 
+  .hamburger-inner::before {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    transition-timing-function: ease;
+    transition-duration: .15s;
+    transition-property: transform;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  .hamburger--spring .hamburger-inner::before {
+    top: 7px;
+    transition: top .1s cubic-bezier(.33333,.66667,.66667,1) .2s, transform .13s cubic-bezier(.55,.055,.675,.19);
+  }
+  .hamburger--spring .hamburger-inner::after {
+    top: 14px;
+    transition: top .2s cubic-bezier(.33333,.66667,.66667,1) .2s, transform .13s cubic-bezier(.55,.055,.675,.19);
+  }
+  .hamburger--spring.active .hamburger-inner{
+    transition-delay: .22s;
+    background-color: transparent;
+    opacity:  1;
+  }
+  .hamburger--spring.active .hamburger-inner::before{
+    top: -4.5px;
+    transition: top .1s cubic-bezier(.33333,0,.66667,.33333) .15s, transform .13s cubic-bezier(.215,.61,.355,1) .22s;
+    transform: translate3d(0,10px,0) rotate(45deg);
+      
+  }
+  .hamburger--spring.active .hamburger-inner::after{
+    top: -4.5px;
+    transition: top .2s cubic-bezier(.33333,0,.66667,.33333), transform .13s cubic-bezier(.215,.61,.355,1) .22s;
+    transform: translate3d(0,10px,0) rotate(-45deg);            
+  }
+
+  @media screen and (min-width: 1200px){
+    .navbar-toggle {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .navbar-toggle {
+      // display: none;
+    }
+  }
+}

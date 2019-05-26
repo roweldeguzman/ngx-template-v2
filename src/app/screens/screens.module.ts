@@ -1,30 +1,54 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router';
-import { ScreensComponent }      from './screens.component';
-import { HeaderComponent } from '../core/header/header.component';
-import { SidebarComponent  } from '../core/sidebar/sidebar.component'
 
+import { PerfectScrollbarModule, PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
-const routes: Routes = [
-	{
-		path: '', component: ScreensComponent
-	},{
-    path: '**', redirectTo: "/"
-  }
-];
+import { ScreensRouting } from './screens-routing.module';
+import { ScreensComponent } from './screens.component';
+import {
+  HeaderComponent,
+  SearchComponent,
+  HamburgerComponent,
+
+  LoaderComponent,
+
+  SidebarComponent,
+  LoggedUserComponent,
+
+  FooterComponent
+} from '@app/core/components';
+
+import { ToggleSubMenuDirective } from '@app/shared'
+
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+	suppressScrollX: true
+};
 
 @NgModule({
   imports: [
-    RouterModule.forChild(routes),
-		CommonModule	
+    ScreensRouting,
+    CommonModule,
+    PerfectScrollbarModule
   ],
   declarations: [
     ScreensComponent,
     HeaderComponent,
-    SidebarComponent
+    SearchComponent,
+    
+    LoaderComponent,
+
+    HamburgerComponent,
+    SidebarComponent,
+    LoggedUserComponent,
+
+    FooterComponent,
+
+    ToggleSubMenuDirective
 	],
-	providers: [],
+	providers: [{
+    provide: PERFECT_SCROLLBAR_CONFIG,
+    useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+  }],
   schemas: [NO_ERRORS_SCHEMA]
 })
 

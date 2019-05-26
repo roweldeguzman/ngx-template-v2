@@ -1,0 +1,31 @@
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 100px){
+  main.container {
+    max-width: 100% !important;
+  }
+  aside:not(.active){
+    width: 250px !important;
+    transform: translateX(-250px);
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media screen and (min-width: 768px){
+
+}
+
+// Large devices (desktops, 992px and up)
+@media screen and (min-width: 992px){
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  main.container {
+    max-width: calc(100% - 250px) !important;
+    margin-left: 250px !important;
+  }
+  aside:not(.active){
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,23 @@
+.header {
+  background: #3f51b5 !important;
+  border-bottom: #3f51b5 !important;
+  position: fixed;
+  width: 100%;
+  height: 52px;
+  box-shadow: 0 5px 5px -3px rgba(0,0,0,.15);
+  color: #fff;
+  padding: .5rem 1rem;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  transition: background-color .3s;
+
+  & > .navbar-brand {
+    outline: none;
+    color: #FFF !important;
+  }
+  
+}
+

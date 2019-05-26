@@ -1,0 +1,74 @@
+<div class="mini-chart">
+    <div class="row">
+  
+      <div class="com-sm-12 col-md-6 col-lg-3">
+        <div class="mini-charts-item bgm-cyan">
+          <div class="clearfix">
+            <ngx-charts-bar-vertical
+              [view]="viewVertical"
+              [scheme]="colorScheme"
+              [results]="data"
+              [gradient]="gradient">
+            </ngx-charts-bar-vertical>
+            <div class="count">
+              <small>Website Traffics</small>
+              <h2>987,459</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="com-sm-12 col-md-6 col-lg-3">
+        <div class="mini-charts-item bgm-lightgreen">
+          <div class="clearfix">
+            <ngx-charts-bar-vertical
+              [view]="viewVertical"
+              [scheme]="colorScheme"
+              [results]="data"
+              [gradient]="gradient">
+            </ngx-charts-bar-vertical>
+            <div class="count">
+              <small>Website Impressions</small>
+              <h2>356,785K</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="com-sm-12 col-md-6 col-lg-3">
+        <div class="mini-charts-item bgm-orange">
+          <div class="clearfix">
+            <ngx-charts-line-chart
+              [view]="viewLine"
+              [scheme]="colorScheme"
+              [results]="sales"
+              [gradient]="gradient">
+            </ngx-charts-line-chart>
+            <div class="count">
+              <small>Total Sales</small>
+              <h2>$ 458,778</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="com-sm-12 col-md-6 col-lg-3">
+        <div class="mini-charts-item bgm-bluegray">
+          <div class="clearfix">
+            <ngx-charts-line-chart
+              [view]="viewLine"
+              [scheme]="colorScheme"
+              [results]="tickets"
+              [gradient]="gradient">
+            </ngx-charts-line-chart>
+            <div class="count">
+              <small>Support Tickets</small>
+              <h2>23,856</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  
+  </div>

@@ -1,0 +1,145 @@
+aside{
+  background: $primary;
+  height: 100%;
+  width: 250px;
+  top: 49px;
+  position: fixed;
+  z-index: 10;
+  transition-duration: .3s;
+  nav{
+    height: calc(100% - 189px);
+    overflow: auto;
+  }
+  nav ul li:not(.separation){
+    cursor: pointer;
+    position: relative;
+    display: block;
+    white-space: nowrap;
+    & > a{
+      padding: 10px 0 10px 10px;
+      color: #687779 !important;
+      display: block;
+      outline: none;
+      &.active, &:hover{
+        color: $white !important;
+        text-decoration: none;
+        background-color:rgba(255,255,255,0.1);
+        cursor: pointer;
+        i { 
+          color: $cyan; 
+        }
+      }
+      span{
+        margin-left: 10px;
+        margin-top: 7px;
+        position: absolute;
+      }
+      div.icon-circle{
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        border-radius: 100%;
+        border: 1px solid #FFF;
+        margin-left: 0;
+        text-align: center;
+        background: #202729;
+        i{
+          font-size: 22px !important;
+          vertical-align: top;
+          padding-bottom: 4px;
+          padding-top: 4px;
+          margin-top: 0;
+        }
+      }
+    }
+    &.sub-menu.multiple > ul {
+      display: none;                
+    }
+    &.sub-menu:not(.toggled) > a{
+      &::after{
+        font-family: 'Material-Design-Iconic-Font';
+        content: "\f278";
+        right: 15px;
+        color: #556366;
+        position: absolute;
+        transform: scale(1);
+        font-size: 17px;
+        margin-top: 7px;
+        transition-duration: .3s;
+      }
+      &:hover::after,
+      &.active::after{
+        color: $white;
+      }
+    }
+    &.sub-menu.toggled > a{
+      &::after{
+        font-family: 'Material-Design-Iconic-Font';
+        content: "\f273";
+        right: 15px;
+        color: #556366;
+        position: absolute;
+        transform: scale(1);
+        margin-top: 7px;
+        font-size: 17px;
+        transition-duration: .3s;
+        transform: rotate(180deg);
+      }
+      &:hover::after,
+      &.active::after{
+        color: $white;
+      }
+    }
+    a.sub{
+      padding-left: 40px !important;
+      &:hover{
+        background: none !important;
+      }
+    }
+    a.sub.active{
+      background: none !important;
+    }
+    a.sub + ul {
+      padding-left: 20px;
+    }
+  }
+  nav ul li.separation{
+    padding: 10px 0 10px 10px;
+    color: #556366;
+  }
+
+  .aside-dropdown {
+    border-bottom: 1px solid #DDD;
+  }
+  .aside-dropdown ul li > a > i{
+    font-size: 22px !important;
+    vertical-align: top;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    margin-top: 0;
+  }
+
+}
+
+.overlay {
+  opacity: 0.5;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.overlay.active{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;	
+  z-index: 8;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in, box-shadow 0 0 10px rgba(0, 0, 0, 0.50);
+  -moz-transition: opacity 0.3s ease-in, box-shadow 0 0 10px rgba(0, 0, 0, 0.50);
+  -o-transition: opacity 0.3s ease-in, box-shadow 0 0 10px rgba(0, 0, 0, 0.50);
+  transition: opacity 0.3s ease-in, box-shadow 0 0 10px rgba(0, 0, 0, 0.50);
+}

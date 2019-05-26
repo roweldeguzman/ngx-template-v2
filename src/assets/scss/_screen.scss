@@ -1,0 +1,15 @@
+/* Perfect Scrollbar override attributes */
+.ps__rail-y {
+  width: 5px;
+  top: 150px !important;
+  right: 2px !important;
+}
+.ps__thumb-y{
+  width: 5px !important;
+  right: 0px !important;
+}
+.ps__rail-y:focus > .ps__thumb-y, 
+.ps__rail-y:hover > .ps__thumb-y {
+  width: 5px !important;
+  right: 0px !important;
+}
