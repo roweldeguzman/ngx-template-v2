@@ -9,8 +9,8 @@ const routes: Routes = [
     children: [
       { path: 'home', loadChildren: './home/home.module#HomeModule'},
       { path: 'typography', loadChildren: './typography/typography.module#TypographyModule'},
-      { path: 'widgets/widget', loadChildren: './widgets/widget/widget.module#WidgetModule'},
-      { path: 'widgets/template', loadChildren: './widgets/template/template.module#TemplateModule'},
+      { path: 'template', loadChildren: './template/template.module#TemplateModule'},
+      { path: 'widget', loadChildren: './widget/widget.module#WidgetModule'},      
     ]
   },
   

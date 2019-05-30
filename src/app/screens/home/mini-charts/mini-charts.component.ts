@@ -39,17 +39,10 @@ export class MiniChartsComponent implements OnInit {
   ];
 
   sales = [
-    {
-      "name": "Sale",
-      "series": this.lineData
-    }
+    { "name": "Sale","series": this.lineData}
   ]
   tickets = [
-    {
-      "name": "Ticket Support",
-      "series": this.lineData
-    }
-  
+    { "name": "Ticket Support", "series": this.lineData }  
   ]
   viewVertical: Array<number> = [150, 75];
   viewLine: Array<number> = [150, 75];

@@ -2,19 +2,20 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
+import { SharedModule } from '@app/shared'
 import { WidgetComponent } from './widget.component';
 
-const routes: Routes = [
-  { path: '', component: WidgetComponent }
-];
 
 @NgModule({
 	imports: [
-    RouterModule.forChild(routes),
+    RouterModule.forChild([
+      { path: '', component: WidgetComponent }
+    ]),
     CommonModule,
-    FormsModule
+    FormsModule,
+    SharedModule
 	],
 	declarations: [
     WidgetComponent

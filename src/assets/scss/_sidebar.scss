@@ -58,7 +58,7 @@ aside{
     &.sub-menu:not(.toggled) > a{
       &::after{
         font-family: 'Material-Design-Iconic-Font';
-        content: "\f278";
+        content: "\f2f9";
         right: 15px;
         color: #556366;
         position: absolute;
@@ -75,7 +75,7 @@ aside{
     &.sub-menu.toggled > a{
       &::after{
         font-family: 'Material-Design-Iconic-Font';
-        content: "\f273";
+        content: "\f2f9";
         right: 15px;
         color: #556366;
         position: absolute;

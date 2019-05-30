@@ -4,11 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
-import { ScreenActionComponent } from '@app/shared/components'
 import { SharedModule } from '@app/shared';
 
 import { HomeComponent } from './home.component';
 import { MiniChartsComponent } from './mini-charts/mini-charts.component';
+import { PieChartsComponent } from './pie-charts/pie-charts.component';
 
 @NgModule({
 	imports: [
@@ -21,8 +21,8 @@ import { MiniChartsComponent } from './mini-charts/mini-charts.component';
 	],
 	declarations: [
     HomeComponent,
-    ScreenActionComponent,
-    MiniChartsComponent
+    MiniChartsComponent,
+    PieChartsComponent
   ],
 	schemas: [NO_ERRORS_SCHEMA]
 })

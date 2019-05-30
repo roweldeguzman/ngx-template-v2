@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 // import { RgLineDirective } from '../directives/rg-line.directive';
 // import { ToggleSubmenuDirective } from '../directives/toggle-submenu.directive'
-// import { WavesEffectDirective } from '../directives/waves-effect.directive';
+import { WavesEffectDirective } from './directives/waves-effect.directive';
 // import { SelectizeDirective } from '../directives/selectize.directive';
 // import { SwitchDirective } from '../directives/switch.directive';
 // import { InputMaskDirective } from '../directives/input-mask.directive';
@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 // import { SparkLineDirective } from '../directives/spark-line.directive';
 // import { EasyPieDirective } from '../directives/easy-pie.directive';
 
+import { ScreenActionComponent } from '@app/shared/components'
 
 import { DatepickerModule } from 'ngx-bootstrap/datepicker';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -46,7 +47,8 @@ import { AlertModule } from 'ngx-bootstrap/alert';
 		
 	],
 	declarations: [
-
+    WavesEffectDirective,
+    ScreenActionComponent
 	],
 	exports:[
 		CommonModule,
@@ -63,7 +65,11 @@ import { AlertModule } from 'ngx-bootstrap/alert';
 		TabsModule,
 		TypeaheadModule,
 		TooltipModule,
-		AlertModule,
+    AlertModule,
+    
+
+    WavesEffectDirective,
+    ScreenActionComponent
 
 	]
 })

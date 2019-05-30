@@ -21,22 +21,22 @@
         </a>
       </li>
 
-
-      <li class="sub-menu" [class.toggled]="contains('widgets')">
-        <a [toggle-submenu] [class.active]="contains('widgets')">
-          <div class="icon-circle">
+      <li>
+        <a routerLinkActive="active" routerLink="/template">
+          <div class="icon-circle">						
             <i class="zmdi zmdi-lamp"></i>
+          </div>
+          <span>Templates</span>
+        </a>
+      </li>
+
+      <li>
+        <a routerLinkActive="active" routerLink="/widget">
+          <div class="icon-circle">						
+            <i class="zmdi zmdi-widgets"></i>
           </div>
           <span>Widgets</span>
         </a>
-        <ul class="list-unstyled" [ngStyle]="{'display': contains('widgets') ? '': 'none'}">
-          <li>
-            <a class="sub" routerLinkActive="active" routerLink="/widgets/template">Templates</a>
-          </li>
-          <li>
-            <a class="sub" routerLinkActive="active" routerLink="/widgets/widget">Widgets</a>
-          </li>
-        </ul>
       </li>
 
       <li class="sub-menu" [class.toggled]="contains('tables')">
@@ -48,7 +48,7 @@
         </a>
         <ul class="list-unstyled" [ngStyle]="{'display': contains('tables') ? '': 'none'}">
           <li>
-            <a class="sub" routerLinkActive="active" routerLink="/tables/table">Tables</a>
+            <a class="sub" routerLinkActive="active" routerLink="/tables/table">HTML Tables</a>
           </li>
           <li>
             <a class="sub" routerLinkActive="active" routerLink="/tables/data-table">Data Tables</a>

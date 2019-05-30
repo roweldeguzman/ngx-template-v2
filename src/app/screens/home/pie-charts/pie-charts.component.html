@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-sm-12 col-md-12 col-lg-6">
+    <div class="card">
+      <div class="card-body pie-chart-parent">
+        <h4 class="card-title">Individual Sales</h4>
+        <ngx-charts-pie-chart
+          [view]="view"
+          [scheme]="colorScheme"
+          [results]="pieBasicData"
+          [gradient]="false"
+          [xAxis]="true"
+          [yAxis]="true"
+          [legend]="false"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true"
+          [labels]="true"
+          >
+        </ngx-charts-pie-chart>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-12 col-lg-6">
+    <div class="card">
+      <div class="card-body ">
+        <h4 class="card-title">Gauge Chart</h4>
+        <ngx-charts-gauge
+          [view]="view"
+          [scheme]="colorScheme"
+          [results]="pieBasicData"
+          [gradient]="false"
+          [xAxis]="true"
+          [yAxis]="true"
+          [legend]="false"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true"
+          [labels]="true"
+          >
+        </ngx-charts-gauge>
+        </div>
+    </div>
+  </div>
+</div>

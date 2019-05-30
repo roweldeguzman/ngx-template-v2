@@ -1,22 +1,34 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
+
+import { SharedModule } from '@app/shared';
 
 import { TypographyComponent } from './typography.component';
+import { HeadingsComponent } from './headings/headings.component';
+import { InlineTextComponent } from './inline-text/inline-text.component';
+import { HelperClassComponent } from './helper-class/helper-class.component';
+import { BlockquotesComponent } from './blockquotes/blockquotes.component';
+import { ListsComponent } from './lists/lists.component';
 
-const routes: Routes = [
-  { path: '', component: TypographyComponent }
-];
 
 @NgModule({
 	imports: [
-    RouterModule.forChild(routes),
+    RouterModule.forChild([
+      { path: '', component: TypographyComponent }
+    ]),
     CommonModule,
-    FormsModule
+    FormsModule,
+    SharedModule
 	],
 	declarations: [
-    TypographyComponent
+    TypographyComponent,
+    HeadingsComponent,
+    InlineTextComponent,
+    HelperClassComponent,
+    BlockquotesComponent,
+    ListsComponent
   ],
 	schemas: [NO_ERRORS_SCHEMA]
 })

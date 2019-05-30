@@ -2,6 +2,7 @@
 @import "~material-design-iconic-font/dist/css/material-design-iconic-font.min.css";
 @import "~perfect-scrollbar/css/perfect-scrollbar.css";
 @import "~roboto-fontface/css/roboto/roboto-fontface.css";
+@import "~node-waves/dist/waves.min.css";
 /* You can add global styles to this file, and also import other style files */
 
 html, body { padding: 0; margin: 0; }
@@ -29,5 +30,13 @@ main {
 @import './assets/scss/dropdown';
 @import './assets/scss/colors';
 @import './assets/scss/charts';
+@import './assets/scss/action';
+@import './assets/scss/generic';
+
+//override
+
+@import './assets/scss/overrides/card';
+@import './assets/scss/overrides/button';
+//responsive styles
 
 @import './assets/scss/partials/responsive.partial';
