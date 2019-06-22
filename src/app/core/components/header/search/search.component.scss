@@ -1,0 +1,66 @@
+.search-form {
+  background: #f1f3f4;
+  border: 1px solid transparent;
+  max-width: 720px;
+  position: relative;
+  transition: background 100ms ease-in, width 100ms ease-out;
+  border-radius: 8px;
+}
+
+.search-form button[area-label="submit"],
+.search-form button[area-label="close"] {
+  position: absolute;
+  top: 3px;
+  float: left;
+  margin-left: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0 5px;
+  line-height: 40px;
+}
+
+.search-form button[area-label="close"] {
+  position: absolute;
+  right: 37px;
+  outline: none;
+  cursor: pointer;
+  display: none;
+}
+
+.search-form button[area-label="submit"] i,
+.search-form button[area-label="close"] i {
+  font-size: 25px;
+  vertical-align: middle;
+}
+
+.search-form button[area-label="submit"]:hover,
+.search-form button[area-label="close"]:hover {
+  background: rgba(60, 64, 67, 0.1);
+  border-radius: 50%;
+  transition: background 100ms ease-in
+}
+
+.input-container {
+  height: 46px;
+  padding: 0;
+  margin-left: 56px;
+  margin-right: 85px;
+}
+
+.input-container input {
+  padding: 5px !important;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+}
+
+.input-container input,
+.input-container input:focus,
+.input-container input:active {
+  background: transparent;
+}
+
