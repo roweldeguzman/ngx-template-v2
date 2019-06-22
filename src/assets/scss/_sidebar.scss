@@ -1,125 +1,66 @@
-aside{
+aside {
   background: $primary;
   height: 100%;
   width: 250px;
-  top: 49px;
+  top: 64px;
   position: fixed;
   z-index: 10;
   transition-duration: .3s;
-  nav{
-    height: calc(100% - 189px);
-    overflow: auto;
+  
+  .navigation { margin-top: 5px; }
+  .navigation > li { margin-top: 5px; }
+  .navigation > li > div{
+    box-shadow: inset 0 0 0 1px transparent;
+    transition: border-radius .15s cubic-bezier(0.4,0.0,0.2,1), margin .15s cubic-bezier(0.4,0.0,0.2,1),width .15s cubic-bezier(0.4,0.0,0.2,1);
+    box-sizing: border-box;
+    border-radius: 0 16px 16px 0;
+    width: 98%;
   }
-  nav ul li:not(.separation){
-    cursor: pointer;
+  .navigation > li > div a {
+    outline: none;
+    text-decoration: none;
+  }
+  .navigation > li > div a:hover{
+    background: rgba(255, 255, 255, 0.1);
+    color: #FFF !important;
+  }
+  .navigation > li > div a.active{
+    background: rgba(255, 255, 255, 0.3);
+    color: #FFF !important;
+  }
+
+  .navigation > li > div a:hover i{
+    color: #FFF;
+  }
+
+  .navigation > li > div a.active i {
+    color: $cyan; 
+  }
+  .navigation > li > div a {
+    align-items: center;
+    display: flex;
+    height: 32px;
+    padding: 0 12px 0 26px;
+    transition: margin .15s cubic-bezier(0.4,0.0,0.2,1),padding .15s cubic-bezier(0.4,0.0,0.2,1);
     position: relative;
-    display: block;
-    white-space: nowrap;
-    & > a{
-      padding: 10px 0 10px 10px;
-      color: #687779 !important;
-      display: block;
-      outline: none;
-      &.active, &:hover{
-        color: $white !important;
-        text-decoration: none;
-        background-color:rgba(255,255,255,0.1);
-        cursor: pointer;
-        i { 
-          color: $cyan; 
-        }
-      }
-      span{
-        margin-left: 10px;
-        margin-top: 7px;
-        position: absolute;
-      }
-      div.icon-circle{
-        display: inline-block;
-        width: 32px;
-        height: 32px;
-        border-radius: 100%;
-        border: 1px solid #FFF;
-        margin-left: 0;
-        text-align: center;
-        background: #202729;
-        i{
-          font-size: 22px !important;
-          vertical-align: top;
-          padding-bottom: 4px;
-          padding-top: 4px;
-          margin-top: 0;
-        }
-      }
-    }
-    &.sub-menu.multiple > ul {
-      display: none;                
-    }
-    &.sub-menu:not(.toggled) > a{
-      &::after{
-        font-family: 'Material-Design-Iconic-Font';
-        content: "\f2f9";
-        right: 15px;
-        color: #556366;
-        position: absolute;
-        transform: scale(1);
-        font-size: 17px;
-        margin-top: 7px;
-        transition-duration: .3s;
-      }
-      &:hover::after,
-      &.active::after{
-        color: $white;
-      }
-    }
-    &.sub-menu.toggled > a{
-      &::after{
-        font-family: 'Material-Design-Iconic-Font';
-        content: "\f2f9";
-        right: 15px;
-        color: #556366;
-        position: absolute;
-        transform: scale(1);
-        margin-top: 7px;
-        font-size: 17px;
-        transition-duration: .3s;
-        transform: rotate(180deg);
-      }
-      &:hover::after,
-      &.active::after{
-        color: $white;
-      }
-    }
-    a.sub{
-      padding-left: 40px !important;
-      &:hover{
-        background: none !important;
-      }
-    }
-    a.sub.active{
-      background: none !important;
-    }
-    a.sub + ul {
-      padding-left: 20px;
-    }
+    color: #687779 !important;
   }
-  nav ul li.separation{
-    padding: 10px 0 10px 10px;
-    color: #556366;
+  .navigation > li > div a i {
+    height: 20px;    
+    margin-right: 18px;
+    width: 20px;
+    font-size: 22px;
+    vertical-align: middle;
+    transition: margin .15s cubic-bezier(0.4,0.0,0.2,1);
   }
-
-  .aside-dropdown {
-    border-bottom: 1px solid #DDD;
+  .navigation > li > div a span{
+    display: flex;
+    flex: 1 1 0;
+    line-height: 20px;
+    top: 3px;
   }
-  .aside-dropdown ul li > a > i{
-    font-size: 22px !important;
-    vertical-align: top;
-    padding-bottom: 4px;
-    padding-top: 4px;
-    margin-top: 0;
-  }
-
 }
+
 
 .overlay {
   opacity: 0.5;
@@ -142,4 +83,4 @@ aside{
   -moz-transition: opacity 0.3s ease-in, box-shadow 0 0 10px rgba(0, 0, 0, 0.50);
   -o-transition: opacity 0.3s ease-in, box-shadow 0 0 10px rgba(0, 0, 0, 0.50);
   transition: opacity 0.3s ease-in, box-shadow 0 0 10px rgba(0, 0, 0, 0.50);
-}
+} 

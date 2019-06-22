@@ -1,3 +1,4 @@
+
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 100px){
   main.container {
@@ -17,6 +18,80 @@
 // Large devices (desktops, 992px and up)
 @media screen and (min-width: 992px){
 
+  body.compact {
+
+    aside {
+      width: 55px !important;
+      transition-duration: .3s;
+      
+      .aside-profile {
+        height: 70px !important;
+        transition: height .3s !important;
+        .labeled, .header-dropdown-icon{
+          opacity: 0 !important;
+          transition: opacity .15s cubic-bezier(0.4,0.0,0.2,1) !important;
+        }
+        img {
+          height: 32px !important;
+          width: 32px !important;
+          left: 10px !important;
+          transition: width .3s,height .3s,left .3s;
+        }
+      }
+    }
+
+    main {
+      max-width: calc(100% - 53px) !important;
+      margin-left: 53px !important;
+    }
+
+    .navigation > li > div {
+      margin-left: 11.5px; // compact size 55, div width 32 (55 - 32 = 23 / 2(left and right) = 11.5px
+      width: 32px;
+      border-radius: 16px;
+    }
+    .navigation > li > div a i {
+      margin-left: -21px;
+      transition: margin .15s cubic-bezier(0.4,0.0,0.2,1);
+    }
+
+    .navigation > li > div a span {
+      opacity: 0;
+      transition: opacity .15s cubic-bezier(0.4,0.0,0.2,1);
+    }
+  }
+
+  body.compact.active{
+    aside{
+      width: 250px !important;
+      transition-duration: .3s;
+      .aside-profile {
+        height: 150px;
+        transition: height .3s;
+        img {
+          height: 50px;
+          width: 50px;
+          left: 16px;
+          transition: width .3s,height .3s, left .3s;
+        }
+      }
+
+      .navigation > li > div {
+        margin-left: 0px;
+        border-radius: 0 16px 16px 0;
+        width: 98%;
+      }
+      .navigation > li > div a i {
+        margin-left: 0px;
+        transition: margin .15s cubic-bezier(0.4,0.0,0.2,1);
+      }
+  
+      .navigation > li > div a span {
+        opacity: 1;
+        transition: opacity .15s cubic-bezier(0.4,0.0,0.2,1);
+      }
+    }
+  }
 }
 
 // Extra large devices (large desktops, 1200px and up)

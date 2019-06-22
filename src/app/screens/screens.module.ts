@@ -9,16 +9,17 @@ import {
   HeaderComponent,
   SearchComponent,
   HamburgerComponent,
+  TopNavigationComponent,
 
   LoaderComponent,
 
   SidebarComponent,
   LoggedUserComponent,
+  NavigationComponent,
 
   FooterComponent
 } from '@app/core/components';
-
-import { ToggleSubMenuDirective } from '@app/shared/directives';
+import { SharedModule } from '@app/shared';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 	suppressScrollX: true
@@ -28,22 +29,23 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   imports: [
     ScreensRouting,
     CommonModule,
-    PerfectScrollbarModule
+    PerfectScrollbarModule,
+    SharedModule
   ],
   declarations: [
     ScreensComponent,
     HeaderComponent,
     SearchComponent,
+    TopNavigationComponent,
     
     LoaderComponent,
 
     HamburgerComponent,
     SidebarComponent,
     LoggedUserComponent,
+    NavigationComponent,
 
-    FooterComponent,
-
-    ToggleSubMenuDirective
+    FooterComponent
 	],
 	providers: [{
     provide: PERFECT_SCROLLBAR_CONFIG,

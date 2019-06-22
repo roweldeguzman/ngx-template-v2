@@ -1,7 +1,15 @@
 <header class="header">
+
+    <div class="wrapper branding">
+      <app-hamburger></app-hamburger>
+      <a class="navbar-brand d-none d-md-block" routerLink="/home" href="/home">Template</a>
+    </div>
+    
+    <div class="wrapper search-form d-lg-block d-none search-container">
+      <app-search></app-search>
+    </div>
   
-  <app-hamburger></app-hamburger>
-  <a class="navbar-brand d-none d-md-block" routerlink="/home" href="/home">NGX Admin Dashboard 2.0</a>
-  <app-search></app-search>
-  
-</header>
+    <div class="wrapper header-nav">
+      <app-top-navigation></app-top-navigation>
+    </div>
+  </header>

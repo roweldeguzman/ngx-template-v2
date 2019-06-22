@@ -4,20 +4,7 @@
 @import "~roboto-fontface/css/roboto/roboto-fontface.css";
 @import "~node-waves/dist/waves.min.css";
 
-html, body { padding: 0; margin: 0; }
-html {
-  position: relative;
-  min-height: 100%;    
-}
-body{
-  font-family: roboto;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #333;
-}
-main {
-  margin-top: 65px;
-}
+@import './assets/scss/base';
 // mixin
 @import './assets/scss/mixin/forms.mixin.scss';
 
