@@ -33,7 +33,7 @@ export class NavigationService {
   }
 
   toggleSidebar(mode: string = 'toggle'): void {
-    if(window.innerWidth > 991) {
+    if(window.innerWidth >= 1200) {
       document.body.classList.toggle('compact');
     } else {
       document.querySelectorAll(".hamburger--spring, aside, .aside-profile, .overlay, footer").forEach(element => {

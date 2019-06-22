@@ -1,10 +1,3 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
-@import "~material-design-iconic-font/dist/css/material-design-iconic-font.min.css";
-@import "~perfect-scrollbar/css/perfect-scrollbar.css";
-@import "~roboto-fontface/css/roboto/roboto-fontface.css";
-@import "~node-waves/dist/waves.min.css";
-
-
 // mixin
 @import "~bootstrap/scss/mixins/breakpoints";
 @import './assets/scss/mixin/forms.mixin.scss';
@@ -18,7 +11,6 @@
 @import './assets/scss/header';
 @import './assets/scss/hamburger';
 @import './assets/scss/sidebar';
-@import './assets/scss/dropdown';
 @import './assets/scss/colors';
 @import './assets/scss/charts';
 @import './assets/scss/action';
@@ -29,6 +21,7 @@
 
 //override
 
+@import './assets/scss/overrides/dropdown';
 @import './assets/scss/overrides/card';
 @import './assets/scss/overrides/button';
 @import './assets/scss/overrides/tabs';

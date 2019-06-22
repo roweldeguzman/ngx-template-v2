@@ -17,7 +17,11 @@
 
 // Large devices (desktops, 992px and up)
 @media screen and (min-width: 992px){
+  
+}
 
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
   body.compact {
 
     aside {
@@ -45,17 +49,17 @@
       margin-left: 53px !important;
     }
 
-    .navigation > li > div {
+    .navigation > li {
       margin-left: 11.5px; // compact size 55, div width 32 (55 - 32 = 23 / 2(left and right) = 11.5px
       width: 32px;
       border-radius: 16px;
     }
-    .navigation > li > div a i {
+    .navigation > li a i {
       margin-left: -21px;
       transition: margin .15s cubic-bezier(0.4,0.0,0.2,1);
     }
 
-    .navigation > li > div a span {
+    .navigation > li a span {
       opacity: 0;
       transition: opacity .15s cubic-bezier(0.4,0.0,0.2,1);
     }
@@ -92,10 +96,7 @@
       }
     }
   }
-}
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
   main.container {
     max-width: calc(100% - 250px) !important;
     margin-left: 250px !important;

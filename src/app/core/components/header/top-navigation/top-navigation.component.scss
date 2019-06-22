@@ -2,16 +2,19 @@
   list-style: none;
   margin: 0 0 0 auto;
   padding: 0;
-  .dropdown-menu .dropdown-arrow {
-    right: 10px;
+  .dropdown-item {
+    line-height: 1.5;
   }
-  li {
+  .dropdown-menu{
+    margin-top: auto;
+  }
+  & > li {
     display: inline-block;
     vertical-align: middle;
     text-align: center;
     padding: 5px;
 
-    & > div:not(.dropdown-menu), & > a{
+    & > div:not(.dropdown-menu), & > a:not(.dropdown-item){
       width: 40px;
       height: 40px;
       display: block;
@@ -23,11 +26,11 @@
       cursor: pointer;
       outline: none;
     }
-    & > div:not(.dropdown-menu):hover, & > a:hover {
+    & > div:not(.dropdown-menu):hover, & > a:not(.dropdown-item):hover {
       background-color: rgba(0, 0, 0, 0.3);
       transition-duration: .3s;
     }
-    & > div:not(.dropdown-menu) i, & > a i{
+    & > div:not(.dropdown-menu) i, & > a:not(.dropdown-item) i{
       font-size: 24px;
     }
     & > div:not(.dropdown-menu) img {
