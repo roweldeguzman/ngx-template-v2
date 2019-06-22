@@ -18,7 +18,7 @@ import {
   FooterComponent
 } from '@app/core/components';
 
-import { ToggleSubMenuDirective } from '@app/shared'
+import { ToggleSubMenuDirective } from '@app/shared/directives';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 	suppressScrollX: true

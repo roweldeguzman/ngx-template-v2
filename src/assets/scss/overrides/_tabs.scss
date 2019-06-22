@@ -1,0 +1,46 @@
+.tabs {
+  & > ul li {
+    .nav-link{
+      outline: none;
+      border: transparent !important;
+      position: relative;
+      padding: 15px;
+      font-weight: 500;
+      text-transform: uppercase;
+      &::before{
+        content: '';
+        background: #00717f;
+        height: 2px;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        -webkit-transition: all;
+        -o-transition: all;
+        transition: all;
+        -webkit-transition-duration: 205ms;
+        transition-duration: 250ms;
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0);
+        transition: .5s cubic-bezier(.35,0,.25,1);
+      }
+    }
+    .nav-link.active,
+    .nav-link:hover{
+      color: #2BA3D4 !important;      
+      border-bottom: 1px solid#dee2e6 !important;
+      border-top-left-radius: none !important;
+      border-top-right-radius: none !important;
+    }
+    .nav-link.active::before{
+      
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+}

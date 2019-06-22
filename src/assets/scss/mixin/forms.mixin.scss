@@ -1,0 +1,22 @@
+@mixin checkbox-radio-has($color) {  
+  &.checkbox, &.radio{
+    color: $color;
+    input[type="checkbox"], input[type="radio"]{
+      &:checked + label::before{        
+        background-color: $color !important;        
+      }
+    }
+    label{
+      &::before{
+        border-color: $color !important;
+      }
+      &::after{
+        background: $color !important;
+      }
+    }
+  } 
+}
+
+@mixin form-has($color) {
+
+}

@@ -3,7 +3,6 @@
 @import "~perfect-scrollbar/css/perfect-scrollbar.css";
 @import "~roboto-fontface/css/roboto/roboto-fontface.css";
 @import "~node-waves/dist/waves.min.css";
-/* You can add global styles to this file, and also import other style files */
 
 html, body { padding: 0; margin: 0; }
 html {
@@ -19,6 +18,8 @@ body{
 main {
   margin-top: 65px;
 }
+// mixin
+@import './assets/scss/mixin/forms.mixin.scss';
 
 @import './assets/scss/partials/layout.vars';
 @import './assets/scss/screen';
@@ -31,12 +32,21 @@ main {
 @import './assets/scss/colors';
 @import './assets/scss/charts';
 @import './assets/scss/action';
-@import './assets/scss/generic';
+@import './assets/scss/utilities';
+@import './assets/scss/widgets';
+
+@import './assets/scss/generics';
 
 //override
 
 @import './assets/scss/overrides/card';
 @import './assets/scss/overrides/button';
+@import './assets/scss/overrides/tabs';
+@import './assets/scss/overrides/forms';
+
+// animations
+@import './assets/scss/animations/ripple.scss';
+
 //responsive styles
 
 @import './assets/scss/partials/responsive.partial';

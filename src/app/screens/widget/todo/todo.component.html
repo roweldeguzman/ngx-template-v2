@@ -1,0 +1,70 @@
+<div class="card todo-list">
+  <div class="card-body">
+    <h5 class="card-title">Todo Lists</h5>
+    <h6 class="card-subtitle c-white">Add, edit and manage your Todo Lists</h6>
+
+    <ul class="actions">
+      <li class="dropdown" dropdown>
+
+        <a dropdownToggle>
+          <i class="zmdi zmdi-more-vert"></i>
+        </a> 
+
+        <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="button-basic">
+          <li class="dropdown-arrow"></li>
+          <li role="menuitem"><a class="dropdown-item">Refresh</a></li>
+          <li role="menuitem"><a class="dropdown-item">Manage Widgets</a></li>
+          <li role="menuitem"><a class="dropdown-item">Widgets Settings</a></li>
+          <li class="divider dropdown-divider"></li>
+          <li role="menuitem"><a class="dropdown-item">Separated link</a></li>				
+        </ul>
+        
+      </li>
+    
+    </ul>
+    
+  </div>
+  <div class="clearfix"></div>
+  <div class="tl-body">
+
+    <div class="add-tl-item" [class.toggled]="isActive">
+      <button data-action="add" class="btn bgm-white btn-float waves-circle" waves-effect (click)="isActive = true">
+        <i class="zmdi zmdi-plus"></i>
+      </button>
+
+      <div class="add-tl-body">
+        <textarea placeholder="What you want to do..." [(ngModel)]="todoValue"></textarea>
+
+        <div class="add-tl-actions">
+          <a class="a-prevent" data-action="dismiss" (click)="isActive = false">
+            <i class="zmdi zmdi-close"></i>
+          </a>
+          <a class="a-prevent" data-action="save" (click)="add()">
+            <i class="zmdi zmdi-check"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-content" *ngFor="let list of lists">
+      <div class="float-right">
+        <ul class="actions actions-alt">
+          <li class="dropdown">
+            <a (click)="remove(list.id)">
+              <i class="zmdi zmdi-delete"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="checkbox" data-color="white">
+        <input type="checkbox" id="{{list.todo}}">
+        <label for="{{list.todo}}">
+          <span>{{ list.todo }}</span>
+        </label>
+        
+      </div>
+    </div>
+
+  </div>
+</div>
+

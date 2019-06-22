@@ -3,9 +3,26 @@
   background: #fff;
   box-shadow: 0 2px 10px rgba(0,0,0,.2);
   margin-bottom: 30px;
+  .card-title {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 140%;
+    margin-top: -5.6px;
+  }
+  .card-subtitle{
+    font-size: 13px;
+    display: block;
+    margin-top: 5px;
+    color: #AEAEAE;
+    line-height: 160%;
+  }
+    
   .card-header{
     position: relative;
     background-color: #ffffff;
+    .card-title, .card-subtitle, .actions i {
+      color: #ffffff !important;
+    }
     &:not(.ch-alt){
       padding: 23px 25px;
       border-bottom: none;
@@ -18,37 +35,27 @@
     }
     &.ch-alt:not([class*="bgm-"]){
       background-color: #f7f7f7;
-    }
-    h2{
-      margin: 0;
-      line-height: 100%;
-      font-size: 17px;
-      font-weight: 400;
-      small{
-        display: block;
-        margin-top: 5px;
-        color: #AEAEAE;
-        line-height: 160%;
+      .card-title, .card-subtitle, .actions i {
+        color: #777777 !important;
       }
-    }  
-    &[class*="bgm-"] h2,
-    &[class*="bgm-"] h2 small,
-    &[class*="bgm-"] i{
-      color: #fff;
     }
     .btn-float {			
       right: 25px;
       bottom: -23px;
       z-index: 1;
     }
-    .actions {
-      position: absolute;
-      right: 10px;
-      z-index: 2;
-      top: 15px !important;
-    }
+    
   }
   .card-body.card-padding {
     padding: 22px 22px;
+  }
+  .actions {
+    position: absolute;
+    right: 10px;
+    z-index: 2;
+    top: 15px !important;
+    i {
+      color: #adadad;
+    }
   }
 }

@@ -1,0 +1,51 @@
+$colors: (
+  black $black,
+  brown $brown,
+  pink $pink,
+  red $red,
+  blue $blue,
+  purple $purple,
+  deeppurple $deeppurple,
+  lightblue $lightblue,
+  cyan $cyan,
+  teal $teal,
+  green $green,
+  lightgreen $lightgreen,
+  lime $lime,
+  yellow $yellow,
+  amber $amber,
+  orange $orange,
+  deeporange $deeporange,
+  gray $gray,
+  bluegray $bluegray,
+  indigo $indigo,
+  white $white,
+);
+
+//---------
+.checkbox, .radio {
+  @each $value in $colors {
+    &[data-color="#{nth($value, 1)}"]{
+
+      input[type="checkbox"], input[type="radio"] {
+        &:checked + label::before{
+          @if nth($value, 1) == white {
+            color: $black !important;
+          }
+          border-color: nth($value, 2) !important;
+          background-color: nth($value, 2) !important;
+        }
+      }
+
+      label{
+        &::before{
+          border: 2px solid nth($value, 2) !important;
+        }
+        &::after{
+          background: nth($value, 2) !important;
+        }
+      }
+    }
+    
+  }
+}
