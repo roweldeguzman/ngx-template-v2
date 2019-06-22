@@ -4,10 +4,13 @@
 @import "~roboto-fontface/css/roboto/roboto-fontface.css";
 @import "~node-waves/dist/waves.min.css";
 
-@import './assets/scss/base';
+
 // mixin
+@import "~bootstrap/scss/mixins/breakpoints";
 @import './assets/scss/mixin/forms.mixin.scss';
 
+// site
+@import './assets/scss/base';
 @import './assets/scss/partials/layout.vars';
 @import './assets/scss/screen';
 @import './assets/scss/loader';

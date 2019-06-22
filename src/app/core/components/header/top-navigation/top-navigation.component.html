@@ -1,3 +1,58 @@
-<p>
-  top-navigation works!
-</p>
+<ul class="top-navigation">
+  <li class="d-md-inline-block d-lg-none">
+    <a role="presentation">
+      <i class="zmdi zmdi-search"></i>
+    </a>
+  </li>
+
+  <li>
+    <a href="https://github.com/roweldeguzman/react-admin-dashboard-v2" target="_blank" rel="noopener noreferrer">
+      <i class="zmdi zmdi-github zmdi-hc-fw"></i>
+    </a>
+  </li>
+
+  <li dropdown placement="bottom right">
+    <a href dropdownToggle (click)="false" aria-controls="messages-dropdown">
+      <i class="zmdi zmdi-email"></i>
+    </a>
+
+    <div id="messages-dropdown" *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="messages">
+      <span class="dropdown-arrow"></span>
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+      
+    </div>
+  </li>
+
+  <li dropdown>
+    <a href dropdownToggle (click)="false" aria-controls="apps-dropdown">
+      <i class="zmdi zmdi-apps"></i>
+    </a>
+
+    <div id="apps-dropdown" *dropdownMenu class="dropdown-menu" role="menu" area-labelledby="apps-dropdown">
+      <span class="dropdown-arrow"></span>
+      Rowel de Guzman
+    </div>
+  </li>
+
+  <li dropdown>
+    <div class="profile-dropdown" dropdownToggle (click)="false" aria-controls="profile-dropdown">
+      <img src="./assets/images/profile.jpeg" />
+    </div>
+
+    <div id="profile-dropdown" *dropdownMenu class="dropdown-menu" role="menu" area-labelledby="profile-dropdown">
+      <span class="dropdown-arrow"></span>
+      <a class="dropdown-item" href="#">Profile</a>
+      <a class="dropdown-item" href="#">Switch Account</a>
+      
+      <a class="dropdown-item" href="#">Logout</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Fullscreen</a>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </li>
+</ul>
