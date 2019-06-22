@@ -1,18 +1,33 @@
+
 <ul class="top-navigation">
   <li class="d-md-inline-block d-lg-none">
     <a role="presentation">
       <i class="zmdi zmdi-search"></i>
     </a>
   </li>
-
-  <li>
+  
+  <li class="d-md-inline-block d-sm-none d-none">
     <a href="https://github.com/roweldeguzman/react-admin-dashboard-v2" target="_blank" rel="noopener noreferrer">
       <i class="zmdi zmdi-github zmdi-hc-fw"></i>
     </a>
   </li>
 
-  <li dropdown placement="bottom right">
+  <li dropdown>
+    <a href dropdownToggle (click)="false" aria-controls="theme-dropdown">
+      <i class="zmdi zmdi-palette zmdi-hc-fw"></i>
+    </a>
+
+    <div id="theme-dropdown" *dropdownMenu class="dropdown-menu" role="menu" area-labelledby="theme-dropdown">
+      <span class="dropdown-arrow"></span>
+      Themes
+    </div>
+  </li>
+
+  <li dropdown>
     <a href dropdownToggle (click)="false" aria-controls="messages-dropdown">
+      <div class="notification-counter">
+        <div>4</div>
+      </div>
       <i class="zmdi zmdi-email"></i>
     </a>
 
@@ -41,7 +56,7 @@
 
   <li dropdown>
     <div class="profile-dropdown" dropdownToggle (click)="false" aria-controls="profile-dropdown">
-      <img src="./assets/images/profile.jpeg" />
+      <img src="./assets/images/profile.jpeg"/>
     </div>
 
     <ul id="profile-dropdown" *dropdownMenu class="dropdown-menu" role="menu" area-labelledby="profile-dropdown">
